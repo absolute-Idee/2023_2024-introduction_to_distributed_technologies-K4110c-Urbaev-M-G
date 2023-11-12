@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: reactapp
+  labels:
+    app: reactapp
+    tier: reactapp
+spec:
+  # modify replicas according to your case
+  replicas: 2
+  selector:
+    matchLabels:
+      tier: reactapp
+  template:
+    metadata:
+      labels:
+        tier: reactapp
+    spec:
+      containers:
+      - name: reactapp-container
+        image: ifilyaninitmo/itdt-contained-frontend:master
+        env:
+        - name: REACT_APP_USERNAME
+          valueFrom:
+            configMapKeyRef:
+              name: reactapp-cm
+              key: REACT_APP_USERNAME
+        - name: REACT_APP_COMPANY_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: reactapp-cm
+              key: REACT_APP_COMPANY_NAME
