@@ -11,19 +11,36 @@ Date of finished:
 
 # ConfigMap and RS
 
-![Alt text](image-1.png)
+Были сгенерированы серты и создан секрет с ними (base64 encoded)
 
-minikube tunnel
+Была создана конфигмапа с env'ами
 
-127.0.0.1	reactapp.default.svc.cluster.local
+Был написан RS, который тянет значения энвов из CM
 
-![Alt text](image.png)
+Был написан Ingress, который для tls использует данные из ранее созданного секрета
 
-![Alt text](image-2.png)
+Далее для Minikube нужно было включить addon
+
+![Alt text](images/image-1.png)
+
+minikube tunnel для доступа к ingress на windows
+
+В /etc/hosts была добавлена запись: "127.0.0.1	reactapp.default.svc.cluster.local"
+
+![Alt text](images/image.png)
+
+---
 
 Странная багулина: 
-![Alt text](image-3.png)
-![Alt text](image-5.png)
+![Alt text](images/image-2.png)
+![Alt text](images/image-3.png)
+![Alt text](images/image-5.png)
+
+---
 
 Передеплоил секрет с namespace:default
-![Alt text](image-4.png)
+![Alt text](images/image-4.png)
+
+# Схема
+
+![Alt text](images/schema.png)
