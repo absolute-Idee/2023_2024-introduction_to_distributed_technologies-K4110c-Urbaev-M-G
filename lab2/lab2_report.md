@@ -11,6 +11,17 @@ Date of finished:
 
 # Deployment and Service
 
-![Alt text](image.png)
+kubectl apply -f Deployment.yaml
+kubectl apply -f Service.yaml
 
-![Alt text](image-1.png)
+![Alt text](images/image.png)
+
+kubectl port-forward svc/reactapp 3000
+
+На экран выводятся значения переменных, которые были заданы в деплойменте, а также ip-адрес одного из подов, на который приземляется трафик
+
+![Alt text](images/image-1.png)
+
+# Схема
+
+![Alt text](images/schema.png)
