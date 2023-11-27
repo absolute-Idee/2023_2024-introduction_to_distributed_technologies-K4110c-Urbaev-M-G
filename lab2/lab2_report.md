@@ -12,6 +12,7 @@ Date of finished:
 # Deployment and Service
 
 kubectl apply -f Deployment.yaml
+
 kubectl apply -f Service.yaml
 
 ![Alt text](images/image.png)
