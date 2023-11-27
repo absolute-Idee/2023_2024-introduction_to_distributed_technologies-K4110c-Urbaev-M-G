@@ -36,6 +36,7 @@ minikube tunnel для доступа к ingress на windows
 ![Alt text](images/image-3.png)
 ![Alt text](images/image-5.png)
 
+(а, не багулина, косяк в нейминге)
 ---
 
 Передеплоил секрет с namespace:default
