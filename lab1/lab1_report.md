@@ -15,6 +15,21 @@ Date of finished:
 
 ![Alt text](images/image-1.png)
 
+minikube kubectl -- expose pod vault --type=NodePort --port=8200
+
+minikube kubectl -- port-forward service/vault 8200:8200
+
+Для получения токена заглянем в логи пода
+
 ![Alt text](images/image-2.png)
 
 ![Alt text](images/image-3.png)
+
+### Вопросы
+
+1. Был запущен minikube, в котором развернут деплоймент волта, создан сервис и прокинут на локалхост для доступа.
+2. k logs pod_name
+
+# Схема
+
+![Alt text](images/schema.png)
